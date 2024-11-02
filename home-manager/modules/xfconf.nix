@@ -9,24 +9,33 @@ in
   xfconf.settings = {
     xfce4-keyboard-shortcuts = 
     {
-      # WM shortucts
+      # window manipulation 
       "xfwm4/custom/<Super>m" = "maximize_window_key";
       "xfwm4/custom/<Super>h" = "hide_window_key";
       "xfwm4/custom/<Super>t" = "close_window_key";
+
+      # window tiling
+      "xfwm4/custom/<Super>Left" = "tile_left_key";
+      "xfwm4/custom/<Super>Right" = "tile_right_key";
+      "xfwm4/custom/<Super>Up" = "tile_up_key";
+      "xfwm4/custom/<Super>Down" = "tile_down_key";
+
       # Rofi shortcuts
       # TODO: make conditional if rofi
       "commands/custom/<Super>d" = "rofi -show drun";
       "commands/custom/<Super>r" = "rofi -show run";
       "commands/custom/<Super>w" = "rofi -show window";
     };
+
     xfce4-panel = {
+      "panels" = [ 1 ];
       # Set number of panels to 1 (disables bottom panel)
       "panels/panel-1/length" = 100;
       "panels/panel-1/position" = "p=6;x=0;y=0";
       "panels/panel-1/position-locked" = true;
       "panels/panel-1/size" = 21;
 
-      "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 ];
+      "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 9 ];
 
 
       # applicationsmenu
