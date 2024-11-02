@@ -18,6 +18,7 @@
 
   networking.hostName = "blueberry"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.wireless.enable = false;
   time.timeZone = "Europe/Amsterdam"; # set time zone
   services.libinput.enable = true;  # enable touchpad
 
