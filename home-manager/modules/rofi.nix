@@ -18,4 +18,11 @@
       show-icons = true;
     };
   };
+
+  # xfce shortcuts (if xfce is enabled)
+  xfconf.settings.xfce4-keyboard-shortcuts = {
+    "commands/custom/<Super>d" = "rofi -show drun";
+    "commands/custom/<Super>r" = "rofi -show run";
+    "commands/custom/<Super>w" = "rofi -show window";
+  };
 }

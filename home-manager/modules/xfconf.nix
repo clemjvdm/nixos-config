@@ -2,9 +2,6 @@
 
 # to copy a configuration made with GUI, use xfconf-query ex. `xfconf-query -c xfce4-panel -lv`
 
-let hasRofi = lib.hasAttr "rofi" config.home.packages;
-  hasAlacritty = lib.hasAttr "alacritty" config.home.packages;
-in 
 {
   xfconf.settings = {
     xfce4-keyboard-shortcuts = 
@@ -20,12 +17,10 @@ in
       "xfwm4/custom/<Super>Up" = "tile_up_key";
       "xfwm4/custom/<Super>Down" = "tile_down_key";
 
-      # Rofi shortcuts
-      # TODO: make conditional if rofi
-      "commands/custom/<Super>d" = "rofi -show drun";
-      "commands/custom/<Super>r" = "rofi -show run";
-      "commands/custom/<Super>w" = "rofi -show window";
-    };
+      # application shortcuts
+      "commands/custom/<Super>Enter" = "exo-open --launch TerminalEmulator";
+
+    };  
 
     xfce4-panel = {
       "panels" = [ 1 ];
