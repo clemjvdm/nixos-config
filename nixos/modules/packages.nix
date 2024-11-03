@@ -18,7 +18,6 @@
     qutebrowser
     blueman
     mpv
-    typora
     gparted
 
     # Coding essentials
