@@ -12,6 +12,7 @@
     wget
     inxi
 
+    # TODO: split GUI and CLI tools up
     # Desktop 
     firefox
     chromium
@@ -24,7 +25,7 @@
     gcc
     gnumake
 
-    xclip
+    xclip # TODO: move this in xorg file
 
   ];
 
