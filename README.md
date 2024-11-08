@@ -22,3 +22,8 @@ An ISO can be generated to go through the NixOS installation with the configurat
 To build the ISO use the following command:
 
 ```nix build .#nixosConfigurations.live.config.system.build.isoImage```
+
+# Todo
+
+- [ ] make `rebuild.sh` generate hardware script if it doesn't exist
+- [ ] create script to autogenerate `setup.nix` file (look through all modules to find custom options)
