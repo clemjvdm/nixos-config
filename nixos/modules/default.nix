@@ -8,5 +8,6 @@
     ./fonts.nix
     ./pipewire.nix
     ./bootloader.nix
+    ./nvidia.nix
   ];
 }
