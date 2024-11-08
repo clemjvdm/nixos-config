@@ -9,10 +9,23 @@ in
     nvidia = {
       enable = lib.mkEnableOption "NVIDIA driver configuration";
 
-      laptop = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-        description = "Configures prime if laptop";
+      laptop = {
+        enable = lib.mkEnableOption "Laptop friendly prime configuration";
+        amdgpuBusId = lib.mkOption {
+          type = lib.types.str;
+          default = "";
+          description = "PCI bus ID of the AMD GPU (e.g., PCI:1:0:0)";
+        };
+        nvidiaBusId = lib.mkOption {
+          type = lib.types.str;
+          default = "";
+          description = "PCI bus ID of the NVIDIA GPU (e.g., PCI:1:0:0)";
+        };
+        intelBusId = lib.mkOption {
+          type = lib.types.str;
+          default = "";
+          description = "PCI bus ID of the Intel GPU (e.g., PCI:1:0:0)";
+        };
       };
 
     };
@@ -55,17 +68,23 @@ in
       };
     }
 
-    (lib.mkIf cfg.laptop {
-	     hardware.nvidia.prime = {
-	       offload = {
-	      enable = true;
-	      enableOffloadCmd = true;
-	     };
-	       # Make sure to use the correct Bus ID values for your system!
-	       amdgpuBusId = "PCI:1:0:0"; # TODO: busID setup options
-	       nvidiaBusId = "PCI:6:0:0";
+    (lib.mkIf cfg.laptop.enable {
+	    hardware.nvidia.prime = {
+	      offload = {
+	        enable = true;
+	        enableOffloadCmd = true;
+	      };
+	      # Make sure to use the correct Bus ID values for your system!
 	    };
     })
+
+    {
+      hardware.nvidia.prime = {
+        amdgpuBusId = cfg.laptop.amdgpuBusId; #TODO: Automatically find bus ids
+        intelBusId = cfg.laptop.intelBusId;
+        nvidiaBusId = cfg.laptop.nvidiaBusId;
+      };
+    }
 
   ]));
 }
