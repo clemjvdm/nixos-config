@@ -30,7 +30,7 @@
       "panels/panel-1/position-locked" = true;
       "panels/panel-1/size" = 21;
 
-      "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 9 ];
+      "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 10 9 ];
 
 
       # applicationsmenu
@@ -61,6 +61,8 @@
       # clock
       "plugins/plugin-8" = "clock";
       "plugins/plugin-8/mode" = 2;
+      "plugins/plugin-8/digital-date-format" = "%d/%m/%Y";
+
 
       # action menu
       "plugins/plugin-9" = "actions";
@@ -79,6 +81,11 @@
         "+logout"
         "-logout-dialog"
       ]; 
+
+      # system tray
+      "plugins/plugin-10" = "systray";
+      "plugins/plugin-10/known-legacy-items" = [];
+      "plugins/plugin-10/symbolic-icons" = false;
     };
   };
 }

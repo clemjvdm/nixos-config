@@ -9,6 +9,6 @@
     ./pipewire.nix
     ./bootloader.nix
     ./nvidia.nix
-    ./wifi.nix
+    ./networking.nix
   ];
 }
