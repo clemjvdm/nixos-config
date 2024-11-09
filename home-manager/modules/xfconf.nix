@@ -1,4 +1,4 @@
-{config, lib, ...}: 
+{config, lib, pkgs, ...}: 
 
 # to copy a configuration made with GUI, use xfconf-query ex. `xfconf-query -c xfce4-panel -lv`
 
