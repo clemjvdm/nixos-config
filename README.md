@@ -31,3 +31,5 @@ To build the ISO use the following command:
 - [ ] fix xfconf keymaps (including switching workspaces)
 - [ ] add setup settings
 - [ ] improve mousepad configuration
+- [ ] battery life optimization
+- [ ] check if amdgpu driver/kernel option is needed
