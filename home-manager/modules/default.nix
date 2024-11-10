@@ -6,7 +6,7 @@
     ./xfconf.nix
     ./librewolf.nix
     ./okular.nix
-    ./typora.nix
+    ./packages.nix
     ./qutebrowser.nix
   ];
 }
