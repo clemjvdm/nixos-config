@@ -17,13 +17,15 @@
     # Desktop 
     firefox
     chromium
-    blueman
     mpv
     gparted
+    bluez-tools
 
     # Coding essentials
     gcc
     gnumake
+
+    powertop # TODO: conditionally add if latpop setup
 
     xclip # TODO: move this in xorg file
 

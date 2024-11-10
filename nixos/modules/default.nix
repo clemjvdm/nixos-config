@@ -11,5 +11,6 @@
     ./nvidia.nix
     ./networking.nix
     ./tlp.nix
+    ./bluetooth.nix
   ];
 }

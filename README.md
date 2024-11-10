@@ -38,3 +38,4 @@ To build the ISO use the following command:
 - [ ] rofi theme
 - [ ] default applications
 - [ ] package cursor theme (to learn packaging)
+- [ ] remove default.nix, by automatically finding modules
