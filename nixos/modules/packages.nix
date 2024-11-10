@@ -11,12 +11,12 @@
     curl
     wget
     inxi
+    unzip
 
     # TODO: split GUI and CLI tools up
     # Desktop 
     firefox
     chromium
-    qutebrowser
     blueman
     mpv
     gparted

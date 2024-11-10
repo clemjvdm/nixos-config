@@ -15,6 +15,9 @@
       kb-remove-to-eol = "";
       kb-mode-complete = "";
 
+      # enable filebrowser
+      modes = ["window" "drun" "run" "ssh" "filebrowser"];
+
       show-icons = true;
     };
   };
@@ -24,5 +27,6 @@
     "commands/custom/<Super>d" = "rofi -show drun";
     "commands/custom/<Super>r" = "rofi -show run";
     "commands/custom/<Super>w" = "rofi -show window";
+    "commands/custom/<Super>f" = "rofi -show filebrowser";
   };
 }

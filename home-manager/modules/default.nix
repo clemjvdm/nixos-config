@@ -7,5 +7,6 @@
     ./librewolf.nix
     ./okular.nix
     ./typora.nix
+    ./qutebrowser.nix
   ];
 }
