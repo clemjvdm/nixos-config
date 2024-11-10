@@ -25,7 +25,7 @@ To build the ISO use the following command:
 
 # Todo
 
-- [ ] make `rebuild.sh` generate hardware script if it doesn't exist
+- [ ] make `rebuild.sh` generate hardware-config.nix if it doesn't exist
 - [ ] create script to autogenerate `setup.nix` file (look through all modules to find custom options)
 - [x] better network manager
 - [ ] fix xfconf keymaps (including switching workspaces)
@@ -33,5 +33,7 @@ To build the ISO use the following command:
 - [ ] improve mousepad configuration
 - [ ] battery life optimization
 - [ ] check if amdgpu driver/kernel option is needed
-- [ ] qutebrowser .nix configuration generator 
+- [x] qutebrowser config
 - [ ] xfce .nix configuration generator
+- [ ] rofi theme
+- [ ] default applications
