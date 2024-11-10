@@ -29,9 +29,9 @@ To build the ISO use the following command:
 - [ ] create script to autogenerate `setup.nix` file (look through all modules to find custom options)
 - [x] better network manager
 - [ ] fix xfconf keymaps (including switching workspaces)
-- [ ] add setup settings
+- [x] add setup settings
 - [x] improve mousepad configuration
-- [ ] battery life optimization
+- [x] battery life optimization
 - [x] check if amdgpu driver/kernel option is needed
 - [x] qutebrowser config
 - [ ] xfce .nix configuration generator
