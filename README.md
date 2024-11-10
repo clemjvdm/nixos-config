@@ -32,7 +32,7 @@ To build the ISO use the following command:
 - [ ] add setup settings
 - [ ] improve mousepad configuration
 - [ ] battery life optimization
-- [ ] check if amdgpu driver/kernel option is needed
+- [x] check if amdgpu driver/kernel option is needed
 - [x] qutebrowser config
 - [ ] xfce .nix configuration generator
 - [ ] rofi theme
