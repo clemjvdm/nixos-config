@@ -10,5 +10,6 @@
     ./bootloader.nix
     ./nvidia.nix
     ./networking.nix
+    ./tlp.nix
   ];
 }

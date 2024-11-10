@@ -30,10 +30,11 @@ To build the ISO use the following command:
 - [x] better network manager
 - [ ] fix xfconf keymaps (including switching workspaces)
 - [ ] add setup settings
-- [ ] improve mousepad configuration
+- [x] improve mousepad configuration
 - [ ] battery life optimization
 - [x] check if amdgpu driver/kernel option is needed
 - [x] qutebrowser config
 - [ ] xfce .nix configuration generator
 - [ ] rofi theme
 - [ ] default applications
+- [ ] package cursor theme (to learn packaging)
