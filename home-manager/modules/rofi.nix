@@ -20,6 +20,7 @@
 
       show-icons = true;
     };
+    theme = "Indego";
   };
 
   # xfce shortcuts (if xfce is enabled)
