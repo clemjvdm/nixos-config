@@ -28,7 +28,7 @@ To build the ISO use the following command:
 - [ ] make `rebuild.sh` generate hardware-config.nix if it doesn't exist
 - [ ] create script to autogenerate `setup.nix` file (look through all modules to find custom options)
 - [x] better network manager
-- [ ] fix xfconf keymaps (including switching workspaces)
+- [x] fix xfconf keymaps (including switching workspaces)
 - [x] add setup settings
 - [x] improve mousepad configuration
 - [x] battery life optimization

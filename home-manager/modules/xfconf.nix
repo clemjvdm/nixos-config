@@ -16,9 +16,13 @@
       "xfwm4/custom/<Super>Right" = "tile_right_key";
       "xfwm4/custom/<Super>Up" = "tile_up_key";
       "xfwm4/custom/<Super>Down" = "tile_down_key";
+      "xfwm4/custom/<Primary><Super>Page_Up" = "move_window_prev_workspace_key";
+      "xfwm4/custom/<Primary><Super>Page_Down" = "move_window_next_workspace_key";
+      "xfwm4/custom/<Primary><Super>Right" = "right_workspace_key";
+      "xfwm4/custom/<Primary><Super>Left" = "left_workspace_key";
 
       # application shortcuts
-      "commands/custom/<Super>Enter" = "exo-open --launch TerminalEmulator";
+      "commands/custom/<Super>Return" = "exo-open --launch TerminalEmulator";
 
     };  
 
