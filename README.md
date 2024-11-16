@@ -46,3 +46,4 @@ There are different approaches to NixOS configurations I have seen online when l
 - [ ] auto detect nvidia/amdgpu bus id?
 - [ ] rofi file browser extended
 - [ ] tmux
+- [ ] pythonocc package fix
