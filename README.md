@@ -23,10 +23,13 @@ To build the ISO use the following command:
 
 ```nix build .#nixosConfigurations.live.config.system.build.isoImage```
 
+
+## State of the config
+
+There are different approaches to NixOS configurations I have seen online when learning about NixOS. Often times I see configurations being large repos full of NixOS modules which can be combined easily through custom options to suit any OS needs. I've considered such an approach for this configuration, as can be seen with the `setup.nix` file which would be a file full of custom options to define which custom modules to use and how. Though I am not ruling out expanding this config in such a way, I am currently running NixOS on one machine only and hence have no need for such a configuration. I am still eager to learn more about NixOS, but for now I will focus on other projects, I may work more with NixOS in the somewhat near future as I have plans to host a home server.
+
 # Todo
 
-- [ ] make `rebuild.sh` generate hardware-config.nix if it doesn't exist
-- [ ] create script to autogenerate `setup.nix` file (look through all modules to find custom options)
 - [x] better network manager
 - [x] fix xfconf keymaps (including switching workspaces)
 - [x] add setup settings
@@ -34,6 +37,7 @@ To build the ISO use the following command:
 - [x] battery life optimization
 - [x] check if amdgpu driver/kernel option is needed
 - [x] qutebrowser config
+- [ ] make `rebuild.sh` generate hardware-config.nix if it doesn't exist
 - [ ] xfce .nix configuration generator
 - [ ] rofi theme
 - [ ] default applications
@@ -41,3 +45,4 @@ To build the ISO use the following command:
 - [ ] remove default.nix, by automatically finding modules
 - [ ] auto detect nvidia/amdgpu bus id?
 - [ ] rofi file browser extended
+- [ ] tmux

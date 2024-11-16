@@ -9,7 +9,7 @@ in
     nvidia = {
       enable = lib.mkEnableOption "NVIDIA driver configuration";
 
-      laptop = {
+      prime = {
         enable = lib.mkEnableOption "Laptop friendly prime configuration";
         amdgpuBusId = lib.mkOption {
           type = lib.types.str;
@@ -68,7 +68,7 @@ in
       };
     }
 
-    (lib.mkIf cfg.laptop.enable {
+    (lib.mkIf cfg.prime.enable {
 	    hardware.nvidia.prime = {
 	      offload = {
 	        enable = true;
@@ -80,9 +80,9 @@ in
 
     {
       hardware.nvidia.prime = {
-        amdgpuBusId = cfg.laptop.amdgpuBusId; #TODO: Automatically find bus ids
-        intelBusId = cfg.laptop.intelBusId;
-        nvidiaBusId = cfg.laptop.nvidiaBusId;
+        amdgpuBusId = cfg.prime.amdgpuBusId; #TODO: Automatically find bus ids
+        intelBusId = cfg.prime.intelBusId;
+        nvidiaBusId = cfg.prime.nvidiaBusId;
       };
     }
 
