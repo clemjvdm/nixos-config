@@ -25,6 +25,13 @@
       "commands/custom/<Super>Return" = "exo-open --launch TerminalEmulator";
 
     };  
+    
+    xfwm4 = {
+      "general/raise_with_any_button" = false;
+      "general/mousewheel_rollup" = false;
+      "general/snap_to_windows" = true;
+    };
+
 
     xfce4-panel = {
       "panels" = [ 1 ];

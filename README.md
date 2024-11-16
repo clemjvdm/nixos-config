@@ -40,3 +40,4 @@ To build the ISO use the following command:
 - [ ] package cursor theme (to learn packaging)
 - [ ] remove default.nix, by automatically finding modules
 - [ ] auto detect nvidia/amdgpu bus id?
+- [ ] rofi file browser extended
