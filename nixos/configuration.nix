@@ -21,11 +21,12 @@
   networking.wireless.enable = false;
   time.timeZone = "Europe/Amsterdam"; # set time zone
   services.libinput.enable = true;  # enable touchpad
+  virtualisation.docker.enable = true;
 
   users.users.clement = {
     isNormalUser = true;
     initialPassword = "clement";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
   };
 
   system.stateVersion = "24.05";  # no touching this
