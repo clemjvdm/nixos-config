@@ -37,11 +37,12 @@ There are different approaches to NixOS configurations I have seen online when l
 - [x] battery life optimization
 - [x] check if amdgpu driver/kernel option is needed
 - [x] qutebrowser config
+- [x] rofi theme
+- [x] package pygerber (to learn packaging)
+- [ ] automatically generate setup.nix to enable/disable modules
 - [ ] make `rebuild.sh` generate hardware-config.nix if it doesn't exist
 - [ ] xfce .nix configuration generator
-- [ ] rofi theme
 - [ ] default applications
-- [ ] package cursor theme (to learn packaging)
 - [ ] remove default.nix, by automatically finding modules
 - [ ] auto detect nvidia/amdgpu bus id?
 - [ ] rofi file browser extended

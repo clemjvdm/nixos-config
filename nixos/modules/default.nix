@@ -8,9 +8,10 @@
     ./fonts.nix
     ./pipewire.nix
     ./bootloader.nix
-    ./nvidia.nix
+    ./nvidia-laptop.nix
     ./networking.nix
     ./tlp.nix
     ./bluetooth.nix
+    ./steam.nix
   ];
 }
