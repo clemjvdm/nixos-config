@@ -1,3 +1,11 @@
+{ config, lib, ... }:
+
+let
+  cfg = config.setup.tlp;
+in 
 {
-  services.tlp.enable = true;
+  options.setup.tlp.enable = lib.mkEnableOption "tlp module";
+  config = ( lib.mkIf cfg.enable {
+    services.tlp.enable = true;
+  });
 }

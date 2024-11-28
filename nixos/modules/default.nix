@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ./xorg.nix
+    ./cinnamon.nix
+    ./xfce.nix
     ./nixvim.nix
     ./packages.nix
     ./fonts.nix

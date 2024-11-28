@@ -4,5 +4,6 @@
     typora
     spotify
     discord
+    drawio
   ];
 }

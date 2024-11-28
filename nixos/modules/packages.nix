@@ -11,6 +11,8 @@
     curl
     wget
     inxi
+    pciutils
+    glxinfo
     unzip
 
     # TODO: split GUI and CLI tools up
@@ -26,9 +28,6 @@
     gnumake
 
     powertop # TODO: conditionally add if latpop setup
-
-    xclip # TODO: move this in xorg file
-
   ];
 
 

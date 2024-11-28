@@ -1,13 +1,13 @@
+{ pkgs, config, lib, ... }:
+let
+  cfg = config.setup.xorg;
+in 
 {
-  services.xserver = {  # enable X11 and XFCE
-    enable = true;
-    desktopManager = {
-      xterm.enable = false;
-      xfce.enable = true;
-    };
-  };
-  services.displayManager.defaultSession = "xfce";
-
-  services.xserver.xkb.layout = "us";  # configure X11 keymap
-  services.xserver.xkb.options = "eurosign:e,caps:escape";
+  options.setup.xorg.enable = lib.mkEnableOption "xorg window system";
+  config = (lib.mkIf cfg.enable {
+    services.xserver.enable = true;
+    services.xserver.xkb.layout = "us";  # configure X11 keymap
+    services.xserver.xkb.options = "eurosign:e,caps:escape";
+    environment.systemPackages = with pkgs; [ xclip ];
+  });
 }
