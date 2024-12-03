@@ -6,6 +6,7 @@
 
     nixvim-config = {
       url = "github:clemjvdm/nixvim-config";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     
     home-manager = {
