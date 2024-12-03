@@ -7,7 +7,7 @@ in
 
   config = (lib.mkIf cfg.enable {
     hardware.graphics.enable = true;
-    services.xserver.videoDrivers = [ "amdgpu" "nvidia" ]; # "amdgpu"
+    services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
     hardware.nvidia = {
       modesetting.enable = true;
       powerManagement.enable = true;
