@@ -16,6 +16,9 @@ Now you are ready to rebuild the system with:
 
 ```sudo nixos-rebuild switch --flake .#default```
 
+### setup.nix
+The `setup.nix` file should be used to enable/disable the different modules provided in the configuration. For example if you are using a laptop with nvidia graphics, make sure to enable the `nvidia-laptop` module.
+
 ## ISO installer
 An ISO can be generated to go through the NixOS installation with the configuration already in place. This is not recommended since this ISO as of now has a broken font and doesn't really provide useful installation tools. To go through the installation with a GUI please just use one of the installers on the NixOS website. Such an ISO may be useful in the future if I decide to improve it.
 
