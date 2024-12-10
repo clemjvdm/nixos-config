@@ -22,6 +22,7 @@
     mpv
     gparted
     bluez-tools
+    ventoy
 
     # Coding essentials
     gcc
