@@ -7,6 +7,5 @@
     fira-code
     fira-code-symbols
     nerd-fonts.fira-code
-      #(nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }
