@@ -8,5 +8,7 @@
     ./okular.nix
     ./packages.nix
     ./qutebrowser.nix
+    ./gtk.nix
+    ./zsh.nix
   ];
 }
