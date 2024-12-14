@@ -14,5 +14,6 @@
     ./tlp.nix
     ./bluetooth.nix
     ./steam.nix
+    ./picom.nix
   ];
 }
