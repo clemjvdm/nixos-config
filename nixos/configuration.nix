@@ -24,6 +24,7 @@
   virtualisation.docker.enable = true;
 
   users.users.clement = {
+    shell = pkgs.zsh;  # TODO: Make all these options configurable in setup.nix
     isNormalUser = true;
     initialPassword = "clement";
     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.

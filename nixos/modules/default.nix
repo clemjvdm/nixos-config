@@ -15,5 +15,6 @@
     ./bluetooth.nix
     ./steam.nix
     ./picom.nix
+    ./zsh.nix
   ];
 }
