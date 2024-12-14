@@ -22,13 +22,12 @@
     mpv
     gparted
     bluez-tools
-    ventoy
 
     # Coding essentials
     gcc
     gnumake
 
-    powertop # TODO: conditionally add if latpop setup
+    powertop
   ];
 
 
