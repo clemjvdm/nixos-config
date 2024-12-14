@@ -20,7 +20,8 @@
 
       show-icons = true;
     };
-    theme = "Indego";
+    # theme = "Indego";
+    theme = ../resources/rofi-theme.rasi;
   };
 
   # xfce shortcuts (if xfce is enabled)
