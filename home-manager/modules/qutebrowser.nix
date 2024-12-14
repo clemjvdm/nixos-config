@@ -1,6 +1,6 @@
 {
   programs.qutebrowser = {
     enable = true;
-    extraConfig = builtins.readFile ../other_files/qutebrowser-config.py;
+    extraConfig = builtins.readFile ../resources/qutebrowser-config.py;
   };
 }
