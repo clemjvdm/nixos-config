@@ -16,5 +16,6 @@
     ./steam.nix
     ./picom.nix
     ./zsh.nix
+    ./tmux.nix
   ];
 }
