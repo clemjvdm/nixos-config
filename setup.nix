@@ -9,6 +9,7 @@
     nixvim.enable = true;
     bluetooth.enable = true;
     nvidia-laptop.enable = true;
+    nvidia-laptop.mode = "prime-sync"; # prime-offload | prime-sync
     picom.enable = true;
 
   };

@@ -3,29 +3,60 @@ let
   cfg = config.setup.nvidia-laptop;
 in
 {
-  options.setup.nvidia-laptop.enable = lib.mkEnableOption "NVIDIA GPU configuration for laptop (prime offloading)"; 
-
-  config = (lib.mkIf cfg.enable {
-    hardware.graphics.enable = true;
-    services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
-    hardware.nvidia = {
-      modesetting.enable = true;
-      powerManagement.enable = true;
-      powerManagement.finegrained = true;
-      # Use proprietary driver
-      open = false;
-      nvidiaSettings = true;
-      # Select driver
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-      # enable and configure PRIME
-      prime = {
-        offload.enable = true;
-        offload.enableOffloadCmd = true;
-        amdgpuBusId = "PCI:6:0:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
+  options.setup.nvidia-laptop = {
+    enable = lib.mkEnableOption "NVIDIA GPU configuration for laptop (prime offloading)"; 
+    mode = lib.mkOption {
+      type = lib.types.enum [ "prime-sync" "prime-offload" ];
+      default = "prime-offload";
+      description = "GPU mode - either PRIME offload or PRIME sync";
     };
-    boot.kernelModules = [ "amdgpu" "nvidia" ];
-  });
+  };
+
+
+  config = lib.mkMerge [
+    (lib.mkIf (cfg.enable && cfg.mode == "prime-offload") {
+      hardware.graphics.enable = true;
+      services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
+      hardware.nvidia = {
+        modesetting.enable = true;
+        powerManagement.enable = true;
+        powerManagement.finegrained = true;
+        # Use proprietary driver
+        open = false;
+        nvidiaSettings = true;
+        # Select driver
+        package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+        # enable and configure PRIME
+        prime = {
+          offload.enable = true;
+          offload.enableOffloadCmd = true;
+          amdgpuBusId = "PCI:6:0:0";
+          nvidiaBusId = "PCI:1:0:0";
+        };
+      };
+      boot.kernelModules = [ "amdgpu" "nvidia" ];
+    })
+
+    (lib.mkIf (cfg.enable && cfg.mode == "prime-sync") {
+      hardware.graphics.enable = true;
+      services.xserver.videoDrivers = [ "nvidia" ];
+      hardware.nvidia = {
+        modesetting.enable = true;
+        # Use proprietary driver
+        open = false;
+        nvidiaSettings = true;
+        # Select driver
+        package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+        # enable and configure PRIME
+        prime = {
+          sync.enable = true;
+          amdgpuBusId = "PCI:6:0:0";
+          nvidiaBusId = "PCI:1:0:0";
+        };
+      };
+    })
+  ];
+
 }
