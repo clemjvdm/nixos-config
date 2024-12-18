@@ -1,6 +1,8 @@
 # NixOS config
 Easily configurable NixOS / home-manger configuration with settings and tools that I like.
 
+![](/home/clement/.config/nixos-config/images/screenshot.png)
+
 ## Using the configuration
 
 This configuration lets you use a custom `setup.nix` file to enable or disable different modules and apply some high level settings. A default `setup.nix` file is provided in the root directory of the repo, it also contains comments on how to edit it.
