@@ -1,7 +1,14 @@
 # NixOS config
-NixOS / home-manager configuration for my personal computer.
+Easily configurable NixOS / home-manger configuration with settings and tools that I like.
 
 ## Using the configuration
+
+This configuration lets you use a custom `setup.nix` file to enable or disable different modules and apply some high level settings. A default `setup.nix` file is provided in the root directory of the repo, it also contains comments on how to edit it.
+
+### Installation
+
+Please read the 'State of the config' section before installing this.
+
 First install NixOS, either with the minimal or GUI installer, by following the steps on the NixOS docs. Before running `nixos-install` make sure to add 'git' to the list of packages to install in 'configuration.nix'.
 
 With git installed, clone this repo anywhere on your computer: 
@@ -16,20 +23,19 @@ Now you are ready to rebuild the system with:
 
 ```sudo nixos-rebuild switch --flake .#default```
 
-### setup.nix
-The `setup.nix` file should be used to enable/disable the different modules provided in the configuration. For example if you are using a laptop with nvidia graphics, make sure to enable the `nvidia-laptop` module.
+However before doing so it is recommened to take a look at the `setup.nix` file and edit it as appropriate, comments within the file describe how to do this. This will reduce the chance of running into issues, and will let you install the the OS as you like it from the start!
 
-## ISO installer
-An ISO can be generated to go through the NixOS installation with the configuration already in place. This is not recommended since this ISO as of now has a broken font and doesn't really provide useful installation tools. To go through the installation with a GUI please just use one of the installers on the NixOS website. Such an ISO may be useful in the future if I decide to improve it.
+## ISO
+An ISO can be generated to live boot this configuration. Although it might contain some font issues, I plan on fixing this soon.
 
 To build the ISO use the following command:
-
 ```nix build .#nixosConfigurations.live.config.system.build.isoImage```
-
 
 ## State of the config
 
-There are different approaches to NixOS configurations I have seen online when learning about NixOS. Often times I see configurations being large repos full of NixOS modules which can be combined easily through custom options to suit any OS needs. I've considered such an approach for this configuration, as can be seen with the `setup.nix` file which would be a file full of custom options to define which custom modules to use and how. Though I am not ruling out expanding this config in such a way, I am currently running NixOS on one machine only and hence have no need for such a configuration. I am still eager to learn more about NixOS, but for now I will focus on other projects, I may work more with NixOS in the somewhat near future as I have plans to host a home server.
+This configration started out being very coupled to the laptop from which I developed it. But as I added more and more modules to it, it made sense to keep these modular, so I could re-use them for other use cases. Currently it is a little bit in between completely coupled to my laptop and not. Most modules can be enabled and disabled through the `setup.nix` file, but the configuration doesn't have many modules to fit other use cases than my own (desktops for example). So as of now I wouldn't recommend installing this configuration as the main OS of any machine. Maybe with the exception of laptops with hybrid graphics, in which case the configuration should work just fine.
+
+Overall I think this configuration is more useful to take inspiration from to write your own. I think how the graphics configuration `nvidia-laptop.nix` and how the `setup.nix` works may be useful things to steal.
 
 # Todo
 
@@ -42,12 +48,10 @@ There are different approaches to NixOS configurations I have seen online when l
 - [x] qutebrowser config
 - [x] rofi theme
 - [x] package pygerber (to learn packaging)
+- [x] tmux
+- [x] pythonocc package fix
 - [ ] automatically generate setup.nix to enable/disable modules
 - [ ] make `rebuild.sh` generate hardware-config.nix if it doesn't exist
-- [ ] xfce .nix configuration generator
 - [ ] default applications
-- [ ] remove default.nix, by automatically finding modules
 - [ ] auto detect nvidia/amdgpu bus id?
 - [ ] rofi file browser extended
-- [ ] tmux
-- [ ] pythonocc package fix
