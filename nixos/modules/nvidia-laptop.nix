@@ -57,6 +57,14 @@ in
         };
       };
     })
+    
+    (lib.mkIf cfg.enable { 
+      specialisation = {
+        prime-sync.configuration = { setup.nvidia-laptop.mode = lib.mkForce "prime-sync"; };
+        prime-offload.configuration = { setup.nvidia-laptop.mode = lib.mkForce "prime-offload"; };
+      }; 
+    })
   ];
+
 
 }
