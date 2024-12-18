@@ -3,8 +3,9 @@
     enable = true;
     settings = {
       font = {
-        size = 9;
-        normal.family = "FiraCode Nerd Font Mono";
+        size = 11;
+        # normal.family = "FiraCode Nerd Font Mono";
+        normal.family = "DejaVu Sans Mono";
       };
 
       env = {
