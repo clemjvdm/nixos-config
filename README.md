@@ -7,7 +7,7 @@ This configuration lets you use a custom `setup.nix` file to enable or disable d
 
 ### Installation
 
-Please read the 'State of the config' section before installing this.
+**⚠️ please read the 'State of the config' section before installing ⚠️**
 
 First install NixOS, either with the minimal or GUI installer, by following the steps on the NixOS docs. Before running `nixos-install` make sure to add 'git' to the list of packages to install in 'configuration.nix'.
 
