@@ -1,7 +1,7 @@
 # NixOS config
 Easily configurable NixOS / home-manger configuration with settings and tools that I like.
 
-![](/home/clement/.config/nixos-config/images/screenshot.png)
+![](./images/screenshot.png)
 
 ## Using the configuration
 
