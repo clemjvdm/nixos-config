@@ -12,12 +12,13 @@
       update = "sudo nixos-rebuild switch";
     };
     
-    promptInit = ''
-      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    shellInit = ''
       pfetch
     '';
-    
-    #promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+
+    promptInit = ''
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    '';
   };
 
 
