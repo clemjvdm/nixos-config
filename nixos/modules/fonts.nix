@@ -7,6 +7,7 @@
     liberation_ttf
     fira-code
     fira-code-symbols
+    nerd-fonts.bigblue-terminal
     nerd-fonts.fira-code
   ];
 }
