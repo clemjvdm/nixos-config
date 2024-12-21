@@ -22,6 +22,7 @@
     mpv
     gparted
     bluez-tools
+    font-manager
 
     # Coding essentials
     gcc
