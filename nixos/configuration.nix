@@ -27,7 +27,8 @@
     shell = pkgs.zsh;  # TODO: Make all these options configurable in setup.nix
     isNormalUser = true;
     initialPassword = "clement";
-    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
+    # WARN: hardcoded
+    extraGroups = [ "wheel" "docker" "libvirtd" ]; # Enable ‘sudo’ for the user.
   };
 
   system.stateVersion = "24.05";  # no touching this
