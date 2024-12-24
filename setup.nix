@@ -39,5 +39,8 @@
       mode = "prime-offload"; # "prime-offload" | "prime-sync"
     };
 
+    # virt-manager configuration, to run virtual machines
+    virtualization.enable = true;
+
   };
 }

@@ -17,5 +17,6 @@
     ./picom.nix
     ./zsh.nix
     ./tmux.nix
+    ./virtualization.nix
   ];
 }
