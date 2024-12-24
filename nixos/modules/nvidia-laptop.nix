@@ -31,6 +31,7 @@ in
         prime = {
           offload.enable = true;
           offload.enableOffloadCmd = true;
+          # WARN: hardcoded BusIds should be changed
           amdgpuBusId = "PCI:6:0:0";
           nvidiaBusId = "PCI:1:0:0";
         };
