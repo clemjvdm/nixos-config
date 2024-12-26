@@ -305,7 +305,7 @@ c.colors.tabs.pinned.selected.odd.fg = 'black'
 #   - auto: Use the system-wide color scheme setting.
 #   - light: Force a light theme.
 #   - dark: Force a dark theme.
-c.colors.webpage.preferred_color_scheme = 'dark'
+c.colors.webpage.preferred_color_scheme = 'auto'
 
 # Bindings for normal mode
 config.bind(',f', 'hint links spawn firefox {hint-url}')
