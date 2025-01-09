@@ -29,6 +29,8 @@
     gnumake
 
     powertop
+    vscode
+    anki
   ];
 
 
