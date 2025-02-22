@@ -3,7 +3,7 @@
     ./alacritty.nix
     ./firefox.nix
     ./rofi.nix
-    ./xfconf.nix
+    #./xfconf.nix
     ./librewolf.nix
     ./okular.nix
     ./packages.nix

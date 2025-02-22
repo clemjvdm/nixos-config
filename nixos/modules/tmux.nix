@@ -26,6 +26,10 @@
     # open panes in current working directory
     bind '"' split-window -v -c "#{pane_current_path}"
     bind % split-window -h -c "{pane_current_path}"
+
+    # enable mouse
+    set -g mouse on 
+    set -g mouse-select-pane on
     '';
   };
 }
