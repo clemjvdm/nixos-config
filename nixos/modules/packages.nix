@@ -31,6 +31,8 @@
     powertop
     vscode
     anki
+    libreoffice-qt6-fresh
+    activitywatch
   ];
 
 

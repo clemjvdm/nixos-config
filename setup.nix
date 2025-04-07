@@ -4,12 +4,12 @@
     # Desktop environment. Only one of these can
     # be enabled at a time. 
     # TODO: make a "desktop-environment" option
-    xfce.enable = true;
-    cinnamon.enable = false;
+    xfce.enable = false;
+    cinnamon.enable = true;
     
     # A window compositor which allows effects like
     # transparent windows with blurred backgrounds.
-    picom.enable = true;
+    #picom.enable = true;
     
     # Provides a tools for video and audio playback
     # to the system.
@@ -28,7 +28,7 @@
 
     
     # Battery optimization, only necessary for laptops
-    tlp.enable = true;
+    tlp.enable = false;
 
     # Enabling the nvidia-laptop module makes both
     # prime-offload and prime-sync modes available as specializations

@@ -14,9 +14,13 @@
     ./tlp.nix
     ./bluetooth.nix
     ./steam.nix
-    ./picom.nix
+    #./picom.nix
     ./zsh.nix
     ./tmux.nix
     ./virtualization.nix
+    # ./ollama.nix
+    ./ssh.nix
+    ./cron.nix
+    ./nix-ld.nix
   ];
 }

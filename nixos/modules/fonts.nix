@@ -9,5 +9,6 @@
     fira-code-symbols
     nerd-fonts.bigblue-terminal
     nerd-fonts.fira-code
+    ibm-plex
   ];
 }

@@ -9,4 +9,6 @@
 
   # Enable root login
   services.openssh.permitRootLogin = "yes";
+
+  networking.firewall.allowedTCPPorts = [ 22 ];
 }
