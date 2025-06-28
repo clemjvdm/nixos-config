@@ -18,7 +18,7 @@
     ./zsh.nix
     ./tmux.nix
     ./virtualization.nix
-    # ./ollama.nix
+    ./ollama.nix
     ./ssh.nix
     ./cron.nix
     ./nix-ld.nix
